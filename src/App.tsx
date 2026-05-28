@@ -7,7 +7,16 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-   
+   async function data(){
+    try{
+      const fetchdata=await fetch("localhost:8000/testcall")
+      console.log(fetchdata)
+
+    }catch(e){
+        console.log(e)
+    }
+
+   }
 
   return (
     <>
